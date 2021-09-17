@@ -7,7 +7,7 @@ import java.util.List;
 
 public interface IProductRepository extends Repository<Product, Long> {
     List<Product> findAll();
-    //Product findOne(int id);
-  /*  Product save(Product p);
-    void delete(int id);*/
+    Product findById(long id);
+    void save(Product p);
+    void deleteById(long id);
 }

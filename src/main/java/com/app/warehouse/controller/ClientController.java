@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
+@CrossOrigin(origins = "http://localhost:4200")
 @RestController
 @RequestMapping({"/client"})
 public class ClientController {
@@ -19,9 +20,26 @@ public class ClientController {
     @Autowired
     private ClientService clientService;
 
-    @CrossOrigin(origins = "http://localhost:4200")
-    @GetMapping
-    public List<Client> listClients(){
+
+  //  @GetMapping({"/listAll"})
+  /*  public List<Client> listClients(){
         return clientService.listClient();
     }
+
+    @GetMapping({"/findById"})
+    public Client findById(final long id){
+        return clientService.findById(id);
+    }
+
+    @GetMapping({"/deleteById"})
+    public List<Client> deletebyId(final long id){
+        clientService.deleteById(id);
+        return listClients();
+    }
+
+    @GetMapping({"/saveClient"})
+    public List<Client> save(final Client client){
+        clientService.save(client);
+        return listClients();
+    }*/
 }

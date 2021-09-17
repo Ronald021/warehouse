@@ -7,4 +7,7 @@ import java.util.List;
 
 public interface IProvider {
     List<Provider> listProvider();
+   /* Provider findById(long id);
+    void save(Provider p);
+    void deleteById(long id);*/
 }

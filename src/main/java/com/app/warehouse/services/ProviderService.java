@@ -19,4 +19,19 @@ public class ProviderService implements IProvider {
     public List<Provider> listProvider() {
         return providerRepo.findAll();
     }
+
+   /* @Override
+    public Provider findById(long id) {
+       return providerRepo.findById(id);
+    }
+
+    @Override
+    public void save(Provider provider) {
+        providerRepo.save(provider);
+    }
+
+    @Override
+    public void deleteById(long id) {
+        providerRepo.deleteById(id);
+    }*/
 }

@@ -6,9 +6,9 @@ import java.util.List;
 
 public interface IProduct {
      List<Product> listP();
-  /*   Product listId(long id);
-     Product add(Product product);
-     Product delete(long id);
-     Product update(Product product);*/
+     Product findById(long id);
+     void save(Product product);
+     void deleteById(long id);
+     Product update(Product product);
 
 }
