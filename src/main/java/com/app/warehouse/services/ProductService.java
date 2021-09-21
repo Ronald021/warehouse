@@ -25,8 +25,8 @@ public class ProductService implements IProduct {
     }
 
     @Override
-    public void save(Product product) {
-        productRepository.save(product);
+    public Product save(Product product) {productRepository.save(product);
+        return product;
     }
 
     @Override
@@ -38,6 +38,4 @@ public class ProductService implements IProduct {
     public Product update(Product product) {
         return null;
     }
-
-
 }

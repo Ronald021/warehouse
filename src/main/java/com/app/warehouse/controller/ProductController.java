@@ -31,9 +31,8 @@ public class ProductController {
         return listProduct();
     }
 
-    @RequestMapping({"/saveProduct"})
-    public List<Product> save(final Product product){
-        productService.save(product);
-        return listProduct();
+    @PostMapping({"/saveProduct"})
+    public Product save(@RequestBody Product product){
+        return productService.save(product);
     }
 }

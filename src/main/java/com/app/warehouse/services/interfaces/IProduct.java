@@ -7,7 +7,7 @@ import java.util.List;
 public interface IProduct {
      List<Product> listP();
      Product findById(long id);
-     void save(Product product);
+     Product save(Product product);
      void deleteById(long id);
      Product update(Product product);
 
