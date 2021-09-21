@@ -1,0 +1,30 @@
+<div class="container">
+    <div class="card">
+        <div class="card-header" align="center">
+          <h1>Products</h1>
+        </div>
+        <div class="card-body">
+            <table class="table table-dark table-striped">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>ID Product</th>
+                        <th>Name</th>
+                        <th>Id Category</th>
+                        <th>Stock</th>
+                        <th>Price</th>
+                    </tr>
+                </thead>
+                <tbody>
+                <tr *ngFor= "let product of products | async">
+                    <td>{{product.idProduct}}</td>
+                    <td>{{product.name}}</td>
+                    <td>{{product.idCategory}}</td>
+                    <td>{{product.stock}}</td>
+                    <td>{{product.price}}</td>
+                </tr>
+                </tbody>
+            </table>
+            <button (click)="createProduct()" class="btn btn-dark">New Product</button>
+        </div>
+    </div>
+</div>
